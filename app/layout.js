@@ -27,7 +27,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Mozek HealthTech - Intelligent Healthcare Wearables",
+  title: "Mozek Healthtech",
   description:
     "Mozek HealthTech builds AI-powered wearable medical devices for seizure detection, fall detection, and elderly care. Introducing the G1 Band.",
 };

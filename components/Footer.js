@@ -75,15 +75,21 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h5>Products</h5>
-            <Link href="/product-g1-band">Mozek G1</Link>
+            {/* <Link href="/product-g1-band">Mozek G1</Link>
             <Link href="/product-sathi">Mozek Sathi</Link>
-            <Link href="/product-neurolink">NeuroLink Elix</Link>
+            <Link href="/product-neurolink">NeuroLink Elix</Link> */}
+              <Link href="/">Mozek G1</Link>
+            <Link href="/">Mozek Sathi</Link>
+            <Link href="/">NeuroLink Elix</Link>
           </div>
           <div className="footer-col">
             <h5>Company</h5>
-            <Link href="/about">About Us</Link>
+            {/* <Link href="/about">About Us</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">Contact</Link> */}
+            <Link href="/">About Us</Link>
+            <Link href="/">Blog</Link>
+            <Link href="/">Contact</Link>
           </div>
           <div className="footer-col">
             <h5>Contact</h5>
