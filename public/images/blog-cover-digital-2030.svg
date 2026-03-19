@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#grad6)"/>
+  <rect width="800" height="450" fill="url(#grid6)"/>
+
+  <!-- Rounded Rectangle Border -->
+  <rect width="800" height="450" rx="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+
+  <!-- Futuristic Wearable Device -->
+  <g transform="translate(330, 150)">
+    <!-- Main device body -->
+    <ellipse cx="0" cy="0" rx="25" ry="35" fill="none" stroke="white" stroke-width="2.5"/>
+    <!-- Top accent -->
+    <rect x="-20" y="-38" width="40" height="4" fill="white" rx="2" opacity="0.8"/>
+    <!-- Screen area -->
+    <ellipse cx="0" cy="-5" rx="18" ry="22" fill="rgba(255,255,255,0.15)"/>
+    <!-- Bottom band -->
+    <rect x="-20" y="28" width="40" height="8" fill="rgba(255,255,255,0.2)" rx="2"/>
+  </g>
+
+  <!-- Heartbeat Line -->
+  <g stroke="white" stroke-width="2.5" fill="none" opacity="0.9">
+    <polyline points="290,190 310,190 315,175 325,205 335,190 355,190 365,180 375,200 385,190 420,190"/>
+  </g>
+
+  <!-- 2030 Text (large, futuristic) -->
+  <text x="520" y="200" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" opacity="0.9" letter-spacing="2">
+    2030
+  </text>
+
+  <!-- Glow effect circles around wearable -->
+  <g stroke="white" fill="none" opacity="0.3">
+    <circle cx="330" cy="150" r="70" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <circle cx="330" cy="150" r="90" stroke-width="1" stroke-dasharray="8,4" opacity="0.2"/>
+  </g>
+
+  <!-- Bottom Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle" letter-spacing="1">
+    Future of Health
+  </text>
+</svg>

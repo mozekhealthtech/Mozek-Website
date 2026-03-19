@@ -1,0 +1,166 @@
+/* ══════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════ */
+.footer {
+  background: #f5f5f5;
+  color: #111;
+  padding: 3.5rem 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.footer-brand-fallback {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+.footer-desc {
+  color: #757575;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  max-width: 300px;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+}
+.social-link {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  color: #757575;
+  transition: all 0.3s ease;
+}
+.social-link:hover {
+  background: #111;
+  border-color: #111;
+  color: white;
+  transform: translateY(-2px);
+}
+.social-link svg {
+  width: 16px;
+  height: 16px;
+}
+.footer-col h5 {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+.footer-col a {
+  display: block;
+  color: #757575;
+  padding: 0.35rem 0;
+  font-size: 0.88rem;
+  font-weight: 400;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  letter-spacing: -0.01em;
+}
+.footer-col a:hover {
+  color: #111;
+  font-weight: 700;
+  transform: none;
+}
+.footer-address {
+  display: block;
+  color: #757575;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  padding-top: 0.35rem;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+.footer-bottom p {
+  color: #999;
+  font-size: 0.78rem;
+}
+
+/* Modern card hover micro-interactions */
+.footer-col a {
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+.footer-col a:hover {
+  transform: translateX(3px);
+}
+
+/* ── Footer Responsive ── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 375px) {
+  .footer-inner {
+    padding: 2.5rem 1rem;
+  }
+  .footer-brand-fallback {
+    font-size: 1rem;
+  }
+  .footer-desc {
+    font-size: 0.75rem;
+  }
+  .footer-col h5 {
+    font-size: 0.7rem;
+  }
+  .footer-col a {
+    font-size: 0.78rem;
+  }
+  .footer-bottom p {
+    font-size: 0.68rem;
+  }
+}

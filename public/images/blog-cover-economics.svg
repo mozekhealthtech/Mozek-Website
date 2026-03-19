@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C3CE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#grad5)"/>
+  <rect width="800" height="450" fill="url(#grid5)"/>
+
+  <!-- Rounded Rectangle Border -->
+  <rect width="800" height="450" rx="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+
+  <!-- Wearable Device (left side) -->
+  <g transform="translate(280, 180)">
+    <!-- Device outline -->
+    <rect x="-20" y="-30" width="40" height="60" fill="none" stroke="white" stroke-width="2.5" rx="6"/>
+    <!-- Screen -->
+    <rect x="-16" y="-25" width="32" height="30" fill="rgba(255,255,255,0.2)" rx="3"/>
+    <!-- Heart icon on screen -->
+    <path d="M 0 -18 Q -5 -22 -8 -20 Q -10 -18 -8 -14 Q 0 -8 0 -2 Q 0 -8 8 -14 Q 10 -18 8 -20 Q 5 -22 0 -18" fill="white" opacity="0.8"/>
+    <!-- Band -->
+    <rect x="-16" y="5" width="32" height="12" fill="rgba(255,255,255,0.15)" rx="2"/>
+  </g>
+
+  <!-- Connection Arrow -->
+  <g transform="translate(350, 180)" stroke="white" stroke-width="2.5" fill="white">
+    <!-- Arrow line -->
+    <line x1="0" y1="0" x2="50" y2="0" stroke="white"/>
+    <!-- Arrow head -->
+    <polygon points="50,0 45,-4 45,4" fill="white"/>
+  </g>
+
+  <!-- Cloud/Platform (right side) -->
+  <g transform="translate(480, 180)">
+    <!-- Cloud shape -->
+    <path d="M -30 0 Q -30 -15 -15 -20 Q -5 -25 5 -20 Q 20 -22 25 -10 Q 35 -8 35 5 Q 35 20 25 25 L -30 25 Q -40 20 -40 5 Q -40 -8 -30 0" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Dollar signs inside -->
+    <text x="-8" y="8" font-family="Arial" font-size="14" font-weight="bold" fill="white" opacity="0.9">$</text>
+    <text x="8" y="8" font-family="Arial" font-size="14" font-weight="bold" fill="white" opacity="0.9">$</text>
+  </g>
+
+  <!-- Value symbols (floating around) -->
+  <g fill="white" opacity="0.6" font-family="Arial" font-size="12" font-weight="bold">
+    <text x="250" y="120">$</text>
+    <text x="520" y="140">$</text>
+    <text x="280" y="280">$</text>
+    <text x="500" y="260">$</text>
+  </g>
+
+  <!-- Bottom Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle" letter-spacing="1">
+    Business of Health
+  </text>
+</svg>

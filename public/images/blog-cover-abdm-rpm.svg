@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C3CE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#grad3)"/>
+  <rect width="800" height="450" fill="url(#grid3)"/>
+
+  <!-- Rounded Rectangle Border -->
+  <rect width="800" height="450" rx="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+
+  <!-- India Map Outline -->
+  <g transform="translate(400, 180)" stroke="white" stroke-width="2" fill="none">
+    <!-- Simplified India map shape -->
+    <path d="M -25 -30 L -20 -35 L -15 -32 L -10 -35 L -5 -30 L 0 -32 L 5 -28 L 10 -30 L 12 -25 L 15 -28 L 18 -20 L 15 -15 L 18 -10 L 15 -5 L 10 0 L 5 5 L 0 8 L -5 10 L -10 8 L -15 10 L -18 5 L -20 0 L -22 -8 L -25 -15 L -28 -20 Z" fill="rgba(255,255,255,0.15)"/>
+  </g>
+
+  <!-- Connected Network Nodes -->
+  <g fill="white" opacity="0.9">
+    <!-- Node 1 - North -->
+    <circle cx="400" cy="120" r="5"/>
+    <!-- Node 2 - East -->
+    <circle cx="480" cy="170" r="5"/>
+    <!-- Node 3 - South -->
+    <circle cx="420" cy="250" r="5"/>
+    <!-- Node 4 - West -->
+    <circle cx="320" cy="180" r="5"/>
+    <!-- Node 5 - Center -->
+    <circle cx="400" cy="180" r="6"/>
+  </g>
+
+  <!-- Connection Lines -->
+  <g stroke="white" stroke-width="1.5" fill="none" opacity="0.7">
+    <line x1="400" y1="120" x2="400" y2="180"/>
+    <line x1="400" y1="180" x2="480" y2="170"/>
+    <line x1="400" y1="180" x2="420" y2="250"/>
+    <line x1="400" y1="180" x2="320" y2="180"/>
+    <line x1="480" y1="170" x2="420" y2="250"/>
+  </g>
+
+  <!-- Bottom Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle" letter-spacing="1">
+    Digital Health
+  </text>
+</svg>

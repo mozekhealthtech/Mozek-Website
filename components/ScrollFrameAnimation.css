@@ -1,0 +1,195 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   SCROLL FRAME ANIMATION — Clean product showcase
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.sfa-section {
+  position: relative;
+  width: 100%;
+  background: #f5f5f7;
+  /* Override Next.js contain: layout style which breaks position: fixed */
+  contain: none !important;
+}
+
+/* ── Canvas viewport — GSAP will pin this with position: fixed ── */
+.sfa-canvas-viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #f5f5f7;
+  will-change: transform;
+}
+
+.sfa-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* GPU acceleration for smooth rendering */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Optimize for scrolling interactions */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ═══════ BOTTOM CTA ═══════ */
+
+.sfa-bottom-cta {
+  position: absolute;
+  bottom: clamp(2rem, 5vh, 4rem);
+  left: 50%;
+  z-index: 6;
+}
+
+.sfa-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  font-family: var(--font-heading, 'Inter', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 60px rgba(0, 0, 0, 0.05);
+}
+
+.sfa-cta-btn:hover {
+  background: linear-gradient(135deg, #16213e, #0f3460);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25), 0 0 80px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.sfa-cta-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.sfa-cta-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* ═══════ SCROLL PROGRESS ═══════ */
+
+.sfa-scroll-hint {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+}
+
+.sfa-scroll-track {
+  width: 3px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.sfa-scroll-thumb {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #444, #222);
+  border-radius: 3px;
+  transform-origin: top center;
+  transition: transform 0.1s linear;
+}
+
+/* ═══════ LOADER ═══════ */
+
+.sfa-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f5f5f7;
+  z-index: 20;
+  animation: sfaLoaderIn 0.3s ease;
+}
+
+@keyframes sfaLoaderIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sfa-loader-ring {
+  width: 52px;
+  height: 52px;
+}
+
+.sfa-loader-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.sfa-loader-text {
+  font-family: var(--font-heading, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(126, 77, 238, 0.7);
+}
+
+/* ═══════ RESPONSIVE ═══════ */
+
+@media (max-width: 768px) {
+  .sfa-scroll-hint {
+    right: 1rem;
+  }
+
+  .sfa-scroll-track {
+    height: 50px;
+  }
+
+  .sfa-bottom-cta {
+    bottom: 1.5rem;
+  }
+
+  .sfa-cta-btn {
+    font-size: 0.85rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* ═══════ ACCESSIBILITY: Respect prefers-reduced-motion ═══════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .sfa-canvas-viewport {
+    /* No animation acceleration needed for reduced motion */
+    will-change: auto;
+  }
+
+  .sfa-cta-btn {
+    /* Simplify transitions for reduced motion */
+    transition: none;
+  }
+
+  .sfa-cta-btn:hover {
+    /* Remove hover animation for reduced motion */
+    transform: none;
+  }
+
+  .sfa-cta-btn svg {
+    transition: none;
+  }
+
+  .sfa-scroll-thumb {
+    transition: none;
+  }
+
+  @keyframes sfaLoaderIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

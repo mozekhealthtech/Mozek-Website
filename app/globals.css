@@ -1,0 +1,44 @@
+/* ===================================================================
+   MOZEK HEALTHTECH - SHARED STYLESHEET
+   Purple HealthTech Theme · Modern Minimalistic · 2026
+   Fonts: Poppins (display/headings) + Inter (body/UI)
+
+   Split into modular files for maintainability.
+   =================================================================== */
+
+/* Base: variables, reset, typography, sections, reveals, utilities */
+@import "../styles/base.css";
+
+/* Navigation */
+@import "../styles/navbar.css";
+
+/* Footer */
+@import "../styles/footer.css";
+
+/* Homepage: hero, stats, industry, testimonials, blog preview */
+@import "../styles/home.css";
+
+/* About page */
+@import "../styles/about.css";
+
+/* Products common, blog listing, contact page */
+@import "../styles/products-blog-contact.css";
+
+/* Product feature grid component */
+@import "../styles/product-feature-grid.css";
+
+/* Product detail pages */
+@import "../styles/product-g1.css";
+@import "../styles/product-sathi.css";
+@import "../styles/product-neurolink.css";
+@import "../styles/product-drishti.css";
+@import "../styles/product-companion.css";
+
+/* Blog article pages */
+@import "../styles/blog-articles.css";
+
+/* GSAP, animations, enhancements */
+@import "../styles/enhancements.css";
+
+/* Global responsive overrides & extras */
+@import "../styles/responsive-extras.css";

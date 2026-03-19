@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C3CE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a3e;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#grad1)"/>
+  <rect width="800" height="450" fill="url(#grid1)"/>
+
+  <!-- Rounded Rectangle Border -->
+  <rect width="800" height="450" rx="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+
+  <!-- Hospital Building Icon -->
+  <g transform="translate(400, 170)">
+    <!-- Hospital building outline -->
+    <rect x="-35" y="-25" width="70" height="70" fill="none" stroke="white" stroke-width="2.5" rx="3"/>
+
+    <!-- Medical cross -->
+    <rect x="-8" y="-15" width="16" height="8" fill="white"/>
+    <rect x="-4" y="-19" width="8" height="16" fill="white"/>
+
+    <!-- Windows -->
+    <rect x="-25" y="-15" width="8" height="8" fill="rgba(255,255,255,0.3)"/>
+    <rect x="-12" y="-15" width="8" height="8" fill="rgba(255,255,255,0.3)"/>
+    <rect x="4" y="-15" width="8" height="8" fill="rgba(255,255,255,0.3)"/>
+    <rect x="17" y="-15" width="8" height="8" fill="rgba(255,255,255,0.3)"/>
+  </g>
+
+  <!-- Data Stream Lines -->
+  <g stroke="white" stroke-width="2.5" fill="none" opacity="0.8">
+    <!-- Line 1 - curved right -->
+    <path d="M 360 180 Q 420 160 480 140" stroke-dasharray="5,5" stroke-linecap="round"/>
+    <!-- Line 2 - curved up-right -->
+    <path d="M 360 200 Q 430 170 520 150" stroke-dasharray="5,5" stroke-linecap="round"/>
+    <!-- Line 3 - curved down-right -->
+    <path d="M 360 220 Q 430 240 520 260" stroke-dasharray="5,5" stroke-linecap="round"/>
+    <!-- Line 4 - curved far right -->
+    <path d="M 360 190 Q 450 210 560 220" stroke-dasharray="5,5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Data point circles -->
+  <g fill="white" opacity="0.9">
+    <circle cx="480" cy="140" r="4"/>
+    <circle cx="520" cy="150" r="4"/>
+    <circle cx="520" cy="260" r="4"/>
+    <circle cx="560" cy="220" r="4"/>
+  </g>
+
+  <!-- Bottom Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle" letter-spacing="1">
+    Digital Health
+  </text>
+</svg>

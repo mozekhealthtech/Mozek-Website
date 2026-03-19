@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7E4DEE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#grad2)"/>
+  <rect width="800" height="450" fill="url(#grid2)"/>
+
+  <!-- Rounded Rectangle Border -->
+  <rect width="800" height="450" rx="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+
+  <!-- Smartwatch/Wearable Band -->
+  <g transform="translate(340, 160)">
+    <!-- Band strap left -->
+    <rect x="-40" y="-10" width="25" height="80" fill="white" rx="5"/>
+    <!-- Watch face -->
+    <circle cx="10" cy="30" r="30" fill="none" stroke="white" stroke-width="3"/>
+    <circle cx="10" cy="30" r="28" fill="rgba(255,255,255,0.1)"/>
+    <!-- Band strap right -->
+    <rect x="45" y="-10" width="25" height="80" fill="white" rx="5"/>
+  </g>
+
+  <!-- Medical Cross Icon (left side) -->
+  <g transform="translate(280, 160)">
+    <rect x="-15" y="-8" width="30" height="16" fill="white" rx="2"/>
+    <rect x="-8" y="-15" width="16" height="30" fill="white" rx="2"/>
+  </g>
+
+  <!-- Stethoscope Icon (right side) -->
+  <g transform="translate(500, 160)" stroke="white" stroke-width="2.5" fill="none">
+    <!-- Earpieces -->
+    <circle cx="-12" cy="-20" r="6"/>
+    <circle cx="12" cy="-20" r="6"/>
+    <!-- Tubes -->
+    <path d="M -12 -14 Q -12 0 -5 15"/>
+    <path d="M 12 -14 Q 12 0 5 15"/>
+    <!-- Diaphragm circle -->
+    <circle cx="0" cy="30" r="12"/>
+  </g>
+
+  <!-- Bottom Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle" letter-spacing="1">
+    Health Tech
+  </text>
+</svg>
