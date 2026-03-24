@@ -163,7 +163,7 @@ export default function HomePage() {
         <div className="video-overlay"></div>
 
         <div className="video-hero-content hero-text-reveal">
-          <h1>Building <span className="highlight">Deeptech</span> Products<br />for Digital Health</h1>
+          <h1>Building <span className="highlight">Deeptech Products</span><br />for Digital Health</h1>
         </div>
         <div className="scroll-indicator">
           <div className="mouse"></div>
